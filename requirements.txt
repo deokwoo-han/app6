@@ -1,4 +1,6 @@
 streamlit
 google-generativeai
 python-docx
-requests
+Pillow
+reportlab
+pypdf
