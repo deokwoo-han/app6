@@ -12,7 +12,51 @@ from PIL import Image
 # [0. System Setup & Session Initialization]
 # -------------------------------------------------------------------------
 st.set_page_config(page_title="AI 법률 마스터 (Ultimate Edition)", page_icon="⚖️", layout="wide")
+# [0. System Setup & Session Initialization] 부분 아래에 추가
 
+st.markdown("""
+    <style>
+    /* 1. 메인 헤더 폰트 스타일링 */
+    h1 {
+        color: #1E3A8A; /* 네이비 블루 */
+        font-family: 'Pretendard', sans-serif;
+        font-weight: 700;
+    }
+    h2, h3 {
+        color: #334155; /* 다크 슬레이트 */
+        font-family: 'Pretendard', sans-serif;
+        font-weight: 600;
+    }
+    
+    /* 2. 버튼 스타일링 (더 전문적인 느낌) */
+    div.stButton > button {
+        background-color: #1E3A8A;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    div.stButton > button:hover {
+        background-color: #172554; /* 더 진한 네이비 */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    /* 3. 텍스트 입력창 테두리 강조 */
+    .stTextInput > div > div > input:focus {
+        border-color: #1E3A8A;
+        box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.2);
+    }
+    
+    /* 4. 정보 상자(Info Box) 스타일 */
+    .stAlert {
+        background-color: #EFF6FF; /* 연한 블루 배경 */
+        border: 1px solid #BFDBFE;
+        color: #1E3A8A;
+    }
+    </style>
+""", unsafe_allow_html=True)
 # Initialize Session State (Combining all variables for Save/Load compatibility)
 default_values = {
     'rec_court': "서울중앙지방법원",
